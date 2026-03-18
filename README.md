@@ -109,6 +109,19 @@ Total issues found: 3
 Cache hit rate: 60% (3 files skipped, 2 files reviewed)
 ```
 
+## Testing
+
+Unit tests cover three core components:
+
+- **HashUtil**: determinism, uniqueness, null safety
+- **CacheManager**: cache miss, cache hit, persistence, clear
+- **ReviewResult**: empty state, list initialization
+```bash
+# Run tests
+javac -cp junit.jar src/*.java test/*.java
+java -cp .:junit.jar org.junit.runner.JUnitCore CodeReviewerTest
+```
+
 ## Future Improvements
 
 - GitHub Actions integration for automated PR review
